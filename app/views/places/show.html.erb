@@ -6,13 +6,13 @@
 <ul>
   <% for entry in @entries %>
     <li>
-      <%= entry["title"] %>, <%= contact["first_name"] %>
+      <%= entry["title"] %>, <%= place["first_name"] %>
     </li>
   <% end %>
 </ul>
 
 <p>
-  <a href="/contacts/new?place_id=<%= @place["id"] %>">entry</a>
+  <a href="/places/new?place_id=<%= @place["id"] %>">entry</a>
 </p>
 
 <p><a href="/places">Back to All places</a></p>
