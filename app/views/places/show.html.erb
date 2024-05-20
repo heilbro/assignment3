@@ -1,5 +1,4 @@
 
-<!-- Place details page -->
 
 <h1><%= @place["name"] %></h1>
 
@@ -13,14 +12,11 @@
 </ul>
 
 <p>
-  <a href="/contacts/new?company_id=<%= @company["id"] %>">New Contact</a>
+  <a href="/contacts/new?place_id=<%= @place["id"] %>">entry</a>
 </p>
 
-<p><a href="/companies">Back to All Companies</a></p>
+<p><a href="/places">Back to All places</a></p>
 
-<form action="/companies/<%= @company["id"] %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <button>Delete Company</button>
-</form>
-```
+
+
 
