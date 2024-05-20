@@ -6,7 +6,8 @@
 <ul>
   <% for entry in @entries %>
     <li>
-      <%= entry["title"] %>, <%= place["first_name"] %>
+      <%= entry["title"] %>, <%= entry["description"] %>
+      <%= entry["posted_on"] %> 
     </li>
   <% end %>
 </ul>
