@@ -1,24 +1,27 @@
 class PlacesController < ApplicationController
+
   def new
     @places = Place.new
-end
+  end
 
-def create
+  def create
   
-  @places = Places.new
+  @places = Place.new
   @places ["name"] = params ["name"]
   @places.save
   redirect_to "/places"
 
+  end
+
   def index 
-    @places = Places.all
+    @places = Place.all
   end
   
   def show
-    @places = places.find_by ({ "id" => params ["id"]})
+    @places = Place.find_by ({"id" => params["id"]})
     @entries = Entry.where ({"place_id" => @place["id"]})
   end
 
-
+  end 
 
   # render companies/index view
