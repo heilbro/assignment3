@@ -1,1 +1,26 @@
-show   
+
+<!-- Place details page -->
+
+<h1><%= @place["name"] %></h1>
+
+<h3>Entries</h3>
+<ul>
+  <% for entry in @entries %>
+    <li>
+      <%= entry["title"] %>, <%= contact["first_name"] %>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/contacts/new?company_id=<%= @company["id"] %>">New Contact</a>
+</p>
+
+<p><a href="/companies">Back to All Companies</a></p>
+
+<form action="/companies/<%= @company["id"] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete Company</button>
+</form>
+```
+
