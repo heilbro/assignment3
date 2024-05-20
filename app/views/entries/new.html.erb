@@ -1,21 +1,31 @@
 <h1>New Entry</h1>
+<form action="/entries" method="post">
   <p>
-    <%=form.label "title", "Entry Title" %>
-    <%= form.text_field "title" %>
+
+    <label for="title">title</label>
+    <input type="text" name="title">
 
     </p>
 
     <p>
-    <% = form.label "description", "Description"%>
-    <%= FORM.text_field "description" %>
+  
+    <label for="description">Description</label>
+    <input type="text" name="description">
 
     <p>
-    <%= form.label "posted_on", "Posted On" %>
-    <%= form.text_field "description" %>
+  
+    <label for="posted_on">Posted On</label>
+    <input type="text" name="posted_on">
 
     </p>
 
      <label for="place_id">Place ID </label>
-      <input type="hidden" name="place_id" value="<%@entry["place_id"] %>"%>
-    <% = form.submit %>
-    <% end %>
+     <input type="hidden" name="place_id" value="<%=@entry["place_id"] %>"%>
+     <p>
+
+  <p>
+    <input type="hidden" name="place_id" value="<%=@entry ["place_id"]%>">
+     <button>Submit</button>
+</form>
+   
+    
